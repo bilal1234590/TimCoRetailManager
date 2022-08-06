@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using Microsoft.AspNet.Identity;
 using System.Web.Http;
-using Microsoft.AspNet.Identity;
 
 namespace TRMDataManager.Controllers
 {
@@ -15,8 +10,9 @@ namespace TRMDataManager.Controllers
         public IHttpActionResult Get()
         {
             string userId = RequestContext.Principal.Identity.GetUserId();
-
-            return Ok("Test");
+            string v1 = "value1";
+            string v2 = "value2";
+            return Ok(v1 + v2 + userId);
         }
 
         // GET api/values/5
@@ -26,12 +22,12 @@ namespace TRMDataManager.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody] string value)
         {
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] string value)
         {
         }
 
