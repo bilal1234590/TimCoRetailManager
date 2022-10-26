@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c70ddb87-5699-4d10-8bb3-62bc925f5bf0" ChangeDateTime="09/12/2022 11:02:58">
+    <Property Name="ElementName" Value="[dbo].[User].[User]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="abd563eb-01c8-4cb9-80e9-87c39f452383" ChangeDateTime="09/12/2022 11:07:39">
+    <Property Name="ElementName" Value="[dbo].[User].[UserId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AuthUserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8abe57aa-ea48-4bbb-9341-f720782cb91e" ChangeDateTime="09/12/2022 11:10:38">
+    <Property Name="ElementName" Value="[dbo].[User].[Email]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EmailAddress" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="706741e6-04dd-40fe-8838-63ecf229fc23" ChangeDateTime="09/12/2022 11:12:31">
+    <Property Name="ElementName" Value="[dbo].[User].[Created]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b3f55e44-fcdd-42ec-ba13-e27f13aef4bf" ChangeDateTime="09/12/2022 11:19:19">
+    <Property Name="ElementName" Value="[dbo].[Sale].[Ca]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Cashier" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7b558b7-83ef-4b8c-b87a-fe694211b12e" ChangeDateTime="09/12/2022 11:19:30">
+    <Property Name="ElementName" Value="[dbo].[Sale].[Cashier]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CashierId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="141beb5d-4f37-4c71-b188-21350b93af57" ChangeDateTime="09/12/2022 11:23:11">
+    <Property Name="ElementName" Value="[dbo].[User].[AuthUserId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3b6e07a8-a6b9-4bc9-9b63-e9c4dcf5adfe" ChangeDateTime="09/12/2022 11:31:01">
+    <Property Name="ElementName" Value="[dbo].[Sale].[Sub]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sale]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SubTotal" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c127e9f2-87ca-44a3-967d-7a5f4cf27e1d" ChangeDateTime="10/10/2022 11:13:56">
+    <Property Name="ElementName" Value="[dbo].[SaleDetail].[Saleid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SaleDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SaleId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c240c5ce-82aa-4cfc-aff5-5393d8f08b51" ChangeDateTime="10/10/2022 11:14:59">
+    <Property Name="ElementName" Value="[dbo].[SaleDetail].[P]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SaleDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Purchase" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d7031fe7-31fe-469b-ae76-f0e17d14dc44" ChangeDateTime="10/10/2022 11:15:14">
+    <Property Name="ElementName" Value="[dbo].[SaleDetail].[Purchase]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SaleDetail]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PurchasePrice" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="568f4f1c-7b2c-48eb-92dd-161c2146a456" ChangeDateTime="10/10/2022 11:21:01">
+    <Property Name="ElementName" Value="[dbo].[Product].[Des]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5a80f736-87c2-4201-b06f-7fe4055e338b" ChangeDateTime="10/10/2022 11:23:07">
+    <Property Name="ElementName" Value="[dbo].[Product].[Creat]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreateDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="564715b6-83f8-45db-8a5e-06a159850b09" ChangeDateTime="10/10/2022 11:23:50">
+    <Property Name="ElementName" Value="[dbo].[Product].[Last]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Product]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LastModified" />
+  </Operation>
+</Operations>

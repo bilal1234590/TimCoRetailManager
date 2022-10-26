@@ -24,5 +24,6 @@ namespace TRMDesktopUI.Views
         {
             InitializeComponent();
         }
+
     }
 }

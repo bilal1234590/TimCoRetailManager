@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using TRMDesktopUI.ViewModels;
+using static TRMDesktopUI.Helper.PasswordBoxHelpers;
 
 namespace TRMDesktopUI
 {
@@ -16,7 +18,12 @@ namespace TRMDesktopUI
         private SimpleContainer _Container = new SimpleContainer();
         public Bootstapper()
         {
-            Initialize(); 
+            Initialize();
+
+            ConventionManager.AddElementConvention<PasswordBox>(
+                PasswordBoxHelper.BoundPasswordProperty,
+                "Password",
+                "PasswordChanged");
         }
 
         protected override void Configure()
