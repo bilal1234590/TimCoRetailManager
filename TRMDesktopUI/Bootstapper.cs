@@ -32,7 +32,8 @@ namespace TRMDesktopUI
 
             _Container
                 .Singleton<IWindowManager, WindowManager>()
-                .Singleton<IEventAggregator, EventAggregator>();
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IAPIHelper, APIHelper>(); 
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)
@@ -62,7 +63,7 @@ namespace TRMDesktopUI
 
         protected override void BuildUp(object instance)
         {
-            _Container.BuildUp(instance);
+            _Container.BuildUp(instance); 
         }
 
 

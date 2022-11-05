@@ -6,13 +6,13 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-
+using TRMDesktopUI.Models;
 
 namespace TRMDesktopUI.Helpers
 {
-    class APIHelper
+    public class APIHelper : IAPIHelper
     {
-        public HttpClient ApiClient { get; set; }
+        private HttpClient ApiClient;
 
         public APIHelper()
         {
@@ -30,7 +30,7 @@ namespace TRMDesktopUI.Helpers
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task Athenticate(string username, string password)
+        public async Task<AuthenticatedUser> Authenticate(string username, string password)
         {
             var data = new FormUrlEncodedContent(new[]
             {
@@ -42,8 +42,23 @@ namespace TRMDesktopUI.Helpers
 
             using (HttpResponseMessage response = await ApiClient.PostAsync("/token", data))
             {
-                var result = await response.Content.ReadAsAsync<string>();
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsAsync<AuthenticatedUser>();
+                    return result;
+
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+
             }
         }
     }
-}
+
+}   
+    
+    
+   
+
