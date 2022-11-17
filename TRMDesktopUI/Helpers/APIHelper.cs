@@ -25,7 +25,7 @@ namespace TRMDesktopUI.Helpers
 
 
             ApiClient = new HttpClient();
-            ApiClient.BaseAddress = new Uri("");
+            ApiClient.BaseAddress = new Uri(api);
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -40,7 +40,7 @@ namespace TRMDesktopUI.Helpers
 
             });
 
-            using (HttpResponseMessage response = await ApiClient.PostAsync("/token", data))
+            using (HttpResponseMessage response = await ApiClient.PostAsync("/Token", data))
             {
                 if (response.IsSuccessStatusCode)
                 {

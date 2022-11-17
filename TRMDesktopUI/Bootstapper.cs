@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using TRMDesktopUI.Helpers;
 using TRMDesktopUI.ViewModels;
 using static TRMDesktopUI.Helper.PasswordBoxHelpers;
 
@@ -33,7 +34,7 @@ namespace TRMDesktopUI
             _Container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
-                .Singleton<IAPIHelper, APIHelper>(); 
+                .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)
@@ -41,7 +42,7 @@ namespace TRMDesktopUI
                 .ToList()
                 .ForEach(viewModelType => _Container.RegisterPerRequest(
                     viewModelType, viewModelType.ToString(), viewModelType));
-                
+
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
