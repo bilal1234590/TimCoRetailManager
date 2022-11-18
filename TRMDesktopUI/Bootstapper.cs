@@ -42,8 +42,8 @@ namespace TRMDesktopUI
                 .ToList()
                 .ForEach(viewModelType => _Container.RegisterPerRequest(
                     viewModelType, viewModelType.ToString(), viewModelType));
-
         }
+        
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
